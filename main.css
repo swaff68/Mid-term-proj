@@ -1,0 +1,78 @@
+img {
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin-top: -2;
+	margin-left: 1%;
+
+
+
+}
+
+.logo {
+	background-color: #4A789C;
+	vertical-align: middle;
+	display: inline-block;
+	width: 100%;
+	border-radius: 12px;
+
+
+}
+
+h1 {
+	margin: 10px;
+	color: black;
+
+}
+
+h4{
+	font-style: italic;
+	text-align: center;
+	color: green;
+	margin-top: 20px;
+}
+
+p {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#thanks{
+	margin-top:0;
+	margin-bottom: 30px;
+}
+
+.supply-status{
+height: 200px;
+background-color: lightgrey;
+border-radius: 12px;
+}
+
+#supplies-needed{
+	background-color: #4A789C;
+	width: 200px;
+	padding: 3px;
+	border-radius: 10px;
+	color: black;
+	border:1px solid grey;
+	margin-top: 5px;
+	margin-left: -10px;
+}
+
+.btn-supplies-needed{
+	margin-left: 20px;
+
+}
+
+.glyphicon-tint{
+	color: skyblue;
+}
+
+.pulldown{
+	margin-top: 20px;
+
+}
+
+.btn-supplies, .btn-contributions{
+	background-color: darkgrey;
+}
