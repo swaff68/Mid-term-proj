@@ -15,6 +15,7 @@ img {
 	display: inline-block;
 	width: 100%;
 	border-radius: 12px;
+	box-shadow: 2px 3px grey;
 
 
 }
@@ -50,6 +51,7 @@ p {
 height: 200px;
 background-color: lightgrey;
 border-radius: 12px;
+box-shadow: 2px 3px grey;
 }
 
 #supplies-needed{
@@ -64,6 +66,10 @@ border-radius: 12px;
 	margin-bottom: 30px;
 	text-shadow: 1px 1px lightgrey;
 
+}
+
+.icons{
+	float: left;
 }
 
 
@@ -100,8 +106,9 @@ color: darkgrey;
 
 .btn-needed-supply{
 	margin-top: 20px;
-	margin-left: 37%;
+	margin-left: 39%;
 	font-size: 20px;
+	box-shadow: 2px 3px grey;
 
 }
 
@@ -118,10 +125,10 @@ color: darkgrey;
 
 .supply-group{
 	margin-top: 30px;
-	margin-left: 35%;
+	margin-left: 37%;
 	display: inline-block;
 	border:1px solid darkgrey;
-	box-shadow: 1px 1px black;
+	box-shadow: 2px 3px grey;
 	padding: 5px;
 	background-color: lightgrey;
 }
