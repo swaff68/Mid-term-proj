@@ -22,6 +22,7 @@ img {
 h1 {
 	margin: 10px;
 	color: black;
+	text-shadow: 1px 1px lightgrey;
 
 }
 
@@ -30,11 +31,14 @@ h4{
 	text-align: center;
 	color: green;
 	margin-top: 20px;
+	font-size: 26px;
+	text-shadow: 1px 0px black;
 }
 
 p {
 	margin-top: 30px;
 	margin-left: 20px;
+	font-size:20px;
 }
 
 #thanks{
@@ -50,29 +54,94 @@ border-radius: 12px;
 
 #supplies-needed{
 	background-color: #4A789C;
-	width: 200px;
-	padding: 3px;
+	width: 220px;
+	padding: 5px;
 	border-radius: 10px;
 	color: black;
 	border:1px solid grey;
 	margin-top: 5px;
 	margin-left: -10px;
-}
-
-.btn-supplies-needed{
-	margin-left: 20px;
+	margin-bottom: 30px;
+	text-shadow: 1px 1px lightgrey;
 
 }
 
-.glyphicon-tint{
+
+#water-needed{
+	vertical-align: middle;
+	text-align: center;
+
+
+}
+
+
+.glyphicon{
 	color: skyblue;
+	padding: 0; 
+	font-size: 30px;
 }
 
-.pulldown{
+.icon-text{
+	font-size: 18px;
+	margin: 0;
+	margin-top: 5px;
+
+}
+
+.glyphicon-home{
+color: green;
+
+}
+
+.glyphicon-cutlery{
+color: darkgrey;
+
+}
+
+.btn-needed-supply{
 	margin-top: 20px;
+	margin-left: 37%;
+	font-size: 20px;
 
 }
 
-.btn-supplies, .btn-contributions{
-	background-color: darkgrey;
+
+.form-control{
+	width: 50%;
+	margin-left: 75px;
+}
+
+.form-group1{
+	font-size: 20px;
+
+}
+
+.supply-group{
+	margin-top: 30px;
+	margin-left: 35%;
+	display: inline-block;
+	border:1px solid darkgrey;
+	box-shadow: 1px 1px black;
+	padding: 5px;
+	background-color: lightgrey;
+}
+
+#supply-type{
+	padding: 0;
+}
+
+#supplyType{
+	margin-left: 10px;
+	width: 150px;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.form-label{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.form-submit{
+		margin-left: 105px;
 }

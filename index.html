@@ -24,55 +24,85 @@
   </div>
 
   <div class="row">
-    <div class=" supply-status col-md-12 col-xs-12">
+    <div class="supply-status col-md-12 col-xs-12">
 
-        <div class="supply-icons">
-          <h4 id="supplies-needed">Supplies Needed</h4>
-          <button type="button" class="btn btn-supplies-needed btn-default btn-lg">
-            <span class="glyphicon glyphicon-tint"></span> Bottles of Water
-          </button>
+        <div class="supply-needed-area">
+            <h3 id="supplies-needed">Supplies Needed</h3>
+
+
+
+            <div class=" icons col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <button type="button" class="btn btn-supplies-needed btn-default btn-lg">
+              <span class="glyphicon glyphicon-tint"></span>
+            </button>
+            <p class="icon-text">XX Bottles of Water <br> every 30 days</p>
+            </div>
+
+
+
+            <div id="water-needed" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <button type="button" class="btn btn-supplies-needed btn-default btn-lg">
+              <span class="glyphicon glyphicon-home"></span>
+            </button>
+            <p class="icon-text">XX (20) Person Tents</p>
+            </div>
+
+
+
+            <div id="water-needed" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <button type="button" class="btn btn-supplies-needed btn-default btn-lg">
+              <span class="glyphicon glyphicon-cutlery"></span>
+            </button>
+            <p class="icon-text">XX Meals <br> every 30 days</p>
+            </div>
+
         </div>
-
-
     </div>
   </div>
 
 
 
-  <div class="row">
-    <div class=" pulldown supplies col-md-4 col-xs-4 col-xs-offset-2">
-      
-      <div class="dropdown">
-        <button class="btn btn-supplies dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-          Supplies
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-        </ul>
-      </div>
-    </div>
+  <div>
+    
+    <button type="button" class="btn btn-needed-supply btn-primary">Create a Needed Supply</button>
 
-    <div class=" pulldown contributions col-md-4 col-xs-4 col-xs-offset-2">
+  </div>
+
+
+<div id="supply-form">
+  <form class="supply-group" role="form">
+     <div >
+      <label id="supply-type" class="col-md-2">Supply Type: </label>
+        <div class="controls col-xs-2">
+          <select id="supplyType" name="supplyType" class="form-control">
+            <option>Supply Type</option>
+            <option>Bottles of Water</option>
+            <option>Meals</option>
+            <option>20 Person Tents</option>
+          </select>
+        </div>
+     </div>       
+
+            
+
+
+        <label class="form-label" for="exampleInputEmail1">Quantity Needed Every 30 Days</label>
+        <input type="text" class="form-control" placeholder="Number Needed">
       
-        <div class="dropdown">
-          <button class="btn btn-contributions dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-            Contribute
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-            <li role="presentation" class="divider"></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-          </ul>
-          </div>
-      </div>
+
+        <div class="form-group">
+          <label class="form-label" for="exampleInputPassword1">Unit Weight (kgs)</label>
+        <input type="text" class="form-control" placeholder="Text input">
+        </div>
+
+      <button type="submit" class=" form-submit btn btn-success">Submit</button>
+
+  </form>
+</div>
+
+
+
+  
 
 
 
