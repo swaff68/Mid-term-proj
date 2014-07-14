@@ -48,29 +48,28 @@ p {
 }
 
 .supply-status{
+border: 1px solid #ccc;
 height: 200px;
-background-color: lightgrey;
 border-radius: 12px;
 box-shadow: 2px 3px grey;
+display: none;
 }
 
 #supplies-needed{
-	background-color: #4A789C;
 	width: 220px;
 	padding: 5px;
 	border-radius: 10px;
-	color: black;
-	border:1px solid grey;
+	color: inherit;
 	margin-top: 5px;
 	margin-left: -10px;
 	margin-bottom: 30px;
-	text-shadow: 1px 1px lightgrey;
-
 }
 
 .icons{
 	float: left;
 }
+
+
 
 
 #water-needed{
@@ -113,42 +112,21 @@ color: darkgrey;
 }
 
 
-.form-control{
-	width: 50%;
-	margin-left: 75px;
-}
-
-.form-group1{
-	font-size: 20px;
-
-}
-
-.supply-group{
-	margin-top: 30px;
-	margin-left: 37%;
-	display: inline-block;
-	border:1px solid darkgrey;
+#supply-form{
+	border: 1px solid #ccc;
+	border-radius: 10px;
 	box-shadow: 2px 3px grey;
-	padding: 5px;
-	background-color: lightgrey;
+	margin-left:33%; 
+	display: none;
+	margin-top: 30px;
 }
 
-#supply-type{
-	padding: 0;
+.form-submit, .form-cancel {
+		margin-left: 20px;
+		box-shadow: 2px 2px grey;
+		margin-bottom: 10px;
 }
 
-#supplyType{
-	margin-left: 10px;
-	width: 150px;
-	padding: 0;
-	margin-bottom: 20px;
-}
-
-.form-label{
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-.form-submit{
-		margin-left: 105px;
+.form-cancel{
+	margin-left: 145px;
 }
