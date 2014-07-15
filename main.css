@@ -53,6 +53,7 @@ height: 200px;
 border-radius: 12px;
 box-shadow: 2px 3px grey;
 display: none;
+margin-top: 20px;
 }
 
 #supplies-needed{
@@ -67,6 +68,7 @@ display: none;
 
 .icons{
 	float: left;
+
 }
 
 
@@ -81,9 +83,9 @@ display: none;
 
 
 .glyphicon{
-	color: skyblue;
 	padding: 0; 
 	font-size: 30px;
+
 }
 
 .icon-text{
@@ -93,8 +95,15 @@ display: none;
 
 }
 
-.glyphicon-home{
-color: green;
+.glyphicon-tint{
+	color: skyblue;
+
+
+
+}
+
+.liters{
+color: black;
 
 }
 
@@ -103,16 +112,37 @@ color: darkgrey;
 
 }
 
-.btn-needed-supply{
+.glyphicon-plane{
+	color: blue;
+}
+
+
+.btn-supplies-needed{
+	box-shadow: 1px 1px grey;
+	position: relative;
+}
+
+.remove{
+	position: absolute;
+	top:-35px;
+	right: 2px;
+	font-size: 15px;
+	opacity: .25
+}
+
+.btn-needed-supply, .btn-contributed-supply{
 	margin-top: 20px;
 	margin-left: 39%;
 	font-size: 20px;
 	box-shadow: 2px 3px grey;
+	color: inherit;
+	font-weight: bold;
+	display: none;
 
 }
 
 
-#supply-form{
+#supply-form, #contribution-form {
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	box-shadow: 2px 3px grey;
@@ -121,12 +151,12 @@ color: darkgrey;
 	margin-top: 30px;
 }
 
-.form-submit, .form-cancel {
+.form-submit, .form-cancel, .form-submit1, .form-cancel1 {
 		margin-left: 20px;
 		box-shadow: 2px 2px grey;
 		margin-bottom: 10px;
 }
 
-.form-cancel{
-	margin-left: 145px;
+.form-cancel, .form-cancel1{
+	margin-left: 170px;
 }
