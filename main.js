@@ -10,6 +10,17 @@ var SupplyInput = function (name, qty, weight){
 	this.weight = weight
 };
 
+var contributionArray= [];
+
+var ContributionInput = function(org, sType, qty, weight){
+
+	this.org = org
+	this.sType = sType
+	this.qty = qty
+	this.weight = weight
+
+};
+
 $(document).on('ready', function() {
 
 
@@ -63,6 +74,8 @@ $('.form-cancel1').click(function(e){
 });
 
 
+// SUPPLY FORM SUBMIT BUTTON INTERACTION
+
 $(document).on('click', '.form-submit', function(){
 	$('.plane').remove()
 	$('.supply-status').show()
@@ -77,10 +90,11 @@ $(document).on('click', '.form-submit', function(){
 	weightCounter += weight * qty;
 	console.log(weightCounter)
 
+	// CREATES THE APPLICABLE SUPPLY ICON
 
 	if(name === 'Bottles of Water'){
 		$('.supply-status').append('<div class=" icons col-lg-3 text-center water" data-type="water" data-qty='+qty+' data-weight='+weight+'><button type="button" class="btn btn-supplies-needed btn-default btn-lg"><span class="glyphicon glyphicon-tint"></span><p class="remove"> x </p> </button><p class="icon-text">' +qty + ' Bottles of Water <br> Needed Every 30 Days</p></div>');
-
+			// REMOVES THE VALUE FROM THE DROPDOWN
 			$('.bottles').remove()	
 	}
 
@@ -97,7 +111,7 @@ $(document).on('click', '.form-submit', function(){
 	
 	}
 
-
+	// CREATES THE PLANE ICON WITH TEXT
 	if(weightCounter >= cargoLoad){
 		var planeLoad = Math.floor(weightCounter / cargoLoad) 
 		$('.supply-status').append('<div class=" icons col-lg-3 text-center plane"><button type="button" class="btn btn-supplies-needed btn-default btn-lg"><span class="glyphicon glyphicon-plane"></span></button><p class="icon-text">' +planeLoad + ' Flights Required <br> Every 30 Days</p></div>');
@@ -112,6 +126,29 @@ $(document).on('click', '.form-submit', function(){
 
 });
 
+// CONTRIBUTION FORM SUBMIT BUTTON INTERACTION
+
+// $(document).on('click', '.form-submit1', function(){
+// 	$('.plane').remove()
+// 	$('.water').remove()
+// 	$('.meals').remove()
+// 	$('.liters').remove()
+
+// 	
+// var org = $('#inputOrg').val()
+// var sType = $('#supplyType').val()
+// 	console.log(name)
+// 	var qty = $('#inputQuantity1').val()
+// 	$('#inputQuantity1').val('')
+// 	console.log(qty)
+// 	var weight = $('#inputWeight1').val()
+// 	$('#inputWeight1').val('')
+// 	console.log(weight)
+// 	weightCounter += weight * qty;
+// 	console.log(weightCounter)
+// }
+
+// REMOVES THE ICON, ADDS THE VALUE BACK TO THE DROPDOWN, HIDES THE STATUS DASHBOARD IF IT IS EMPTY
 $(document).on('click', '.remove', function(){
 	$('.plane').remove()
 	var icon = $(this).closest(".icons").attr('data-type')
@@ -136,12 +173,7 @@ $(document).on('click', '.remove', function(){
 
 	}
 
-
-	
-
-
-
-
+// REMOVES THE SUPPLY QUANTITY FROM THE GLOBAL QTY AND WEIGHT COUNTER & THE PLANE ICON IF APPLICABLE
 	var removeQuantity = $(this).closest('.icons').attr('data-qty')
 	var removeWeight = $(this).closest('.icons').attr('data-weight')
 	$(this).closest('.icons').remove()
