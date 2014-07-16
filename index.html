@@ -31,6 +31,25 @@
 
       <button type="button" class="btn btn-contributor btn-default">Contributor</button>
 
+<div><button type="button" class="btn btn-supplyContributors btn-default">Supply Contributors</button>
+</div>
+
+<div>
+  <div class="row contGrid">
+    <div class="col-lg-2 contGridText">Organization</div>
+    <div class="col-lg-2 contGridText">Total Contributions</div>
+
+    <!-- <div class="row"><div class="col-lg-2">'+org+'</div><div class="col-lg-2">Total #</div><div class="col-lg-2">'+qty1+'</div><div class="col-lg-2">'+qty1'</div><div class="col-lg-2">'+qty1'</div></div> -->
+  </div>
+
+  <div class="orgContribution">
+    
+  </div>
+</div>
+
+
+
+
  
 <!-- SUPPLY DASHBOARD -->
 
@@ -38,7 +57,7 @@
       <div class="supply-status col-md-12 col-xs-12">
 
           <div class="supply-needed-area">
-              <h3 id="supplies-needed">Supplies Needed</h3>
+              <h3 id="supplies-needed">Supplies Needed Every 30 Days</h3>
 
           </div>
       </div>
@@ -85,7 +104,7 @@
     </div>
 
     <div class="form-group">
-        <label for="inputWeight" class="col-xs-6 control-label">Unit Weight:</label>
+        <label for="inputWeight" class="col-xs-6 control-label">Weight per Unit:</label>
         <div class="col-xs-4">
           <input type="text" class="form-control" id="inputWeight" placeholder="kgs/ltrs">
         </div>
@@ -134,7 +153,7 @@
     </div>
 
     <div class="form-group">
-        <label for="inputWeight1" class="col-xs-6 control-label">Unit Weight:</label>
+        <label for="inputWeight1" class="col-xs-6 control-label">Weight per Unit:</label>
         <div class="col-xs-6">
           <input type="text" class="form-control" id="inputWeight1" placeholder="kgs/ltrs">
         </div>
@@ -144,6 +163,7 @@
       <button type="submit" class=" form-cancel1 btn btn-warning">Cancel</button>
 
   </form>
+
 </div>
   
 
@@ -158,12 +178,14 @@
 
 
 
-	
-
-
 
 
 	
+
+
+
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
