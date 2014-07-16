@@ -252,3 +252,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 .btn-supplyContributors{
 display: block;
 }
+
+
+.orgName{
+	margin-left: 20px;
+
+}
+
+.qtyWater{
+	margin-left: 45px;
+}
+
+.qtyFuel{
+	margin-left: 10px;
+}
+
+.qtyMeals{
+	margin-left: -10px;
+}

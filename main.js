@@ -254,10 +254,11 @@ else{
 
 
 	console.log(weightCounter)
-
+$('.orgContribution').empty();
 	for(var i=0; i<orgsArray.length; i++){
-		$('.orgContribution').empty();
-		$('.orgContribution').append('<div class="row"><div class="col-lg-2">'+orgsArray[i].name+'</div><div class="col-lg-2">Total #</div><div class="col-lg-2 qtyWater">'+orgsArray[i].waterContributed+'</div><div class="col-lg-2 qtyFuel">'+orgsArray[i].fuelContributed+'</div><div class="col-lg-2 qtyMeals">'+orgsArray[i].mealsContributed+'</div></div>');
+		var totalCont = orgsArray[i].waterContributed + orgsArray[i].fuelContributed + orgsArray[i].mealsContributed
+
+		$('.orgContribution').append('<div class="row"><div class="col-lg-2 orgName">'+orgsArray[i].name+'</div><div class="col-lg-2 contTotal">'+totalCont+'</div><div class="col-lg-2 qtyWater">'+orgsArray[i].waterContributed+'</div><div class="col-lg-2 qtyFuel">'+orgsArray[i].fuelContributed+'</div><div class="col-lg-2 qtyMeals">'+orgsArray[i].mealsContributed+'</div></div>');
 
 	}
 		
