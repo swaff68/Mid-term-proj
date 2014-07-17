@@ -36,12 +36,11 @@ var Organization = function(name, waterContributed, mealsContributed, fuelContri
 
 
 
-var ContributionInput = function(org, sType, qty1, weight1){
+var ContributionInput = function(org, sType, qty1){
 
 	this.org = org
 	this.sType = sType
 	this.qty = qty1
-	this.weight = weight1
 
 };
 
@@ -236,9 +235,9 @@ var sType = $('#supplyType').val()
 var qty1 = +$('#inputQuantity1').val()
 	$('#inputQuantity1').val('')
 	console.log(qty1)
-var weight1 = $('#inputWeight1').val()
-	$('#inputWeight1').val('')
-	console.log(weight1)
+// var weight1 = $('#inputWeight1').val()
+// 	$('#inputWeight1').val('')
+// 	console.log(weight1)
 
 // LOOKS FOR THE NAME OF THE ORG THAT WAS JUST SUBMITTED VIA THE CONTRIBUTION FORM	
 var organization = {};
