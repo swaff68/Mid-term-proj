@@ -355,7 +355,7 @@ $(document).on('click', '.remove', function(){
 
 	if(weightCounter >= cargoLoad){
 	var planeLoad = Math.floor(weightCounter / cargoLoad) 
-	$('.supply-status').append('<div class=" icons col-lg-3 text-center plane"><button type="button" class="btn btn-supplies-needed btn-default btn-lg"><span class="glyphicon glyphicon-plane"></span></button><p class="icon-text">' +planeLoad + ' Flights Required <br> Every 30 days</p></div>');
+	$('.supply-status').append('<div class=" icons col-lg-3 text-center plane"><button type="button" class="btn btn-supplies-needed btn-default btn-lg"><span class="glyphicon glyphicon-plane"></span></button><p class="icon-text">' +planeLoad + ' Flights Required</p></div>');
 	console.log(planeLoad)
 
 
