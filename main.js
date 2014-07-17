@@ -8,6 +8,10 @@ var waterNeeded = 0;
 var mealsNeeded = 0;
 var fuelNeeded = 0;
 
+var waterWeight = 0;
+var mealsWeight = 0;
+var fuelWeight = 0;
+
 var supplyArray = [];
 var orgsArray = [];
 
@@ -47,18 +51,18 @@ var contributionStatus = function($icon, needed, contributions){
 		$icon.addClass('red')
 	} 
 
-	else if(contributions/needed<=0.8 && contributions/needed>=0.51){
+	else if(contributions/needed<0.8 && contributions/needed>0.5){
 		$icon.removeClass('red')
 		$icon.addClass('redYellow')
 	}
-	else if(contributions/needed<=0.99 && contributions/needed>=0.81){
+	else if(contributions/needed<1.00 && contributions/needed>=0.8){
 		$icon.removeClass('red')
 		$icon.removeClass('redYellow')
 		$icon.addClass('yellowGreen')
 
 	}
 
-	else if(contributions/needed<=1.00){
+	else if(contributions/needed>=1.00){
 		$icon.removeClass('red')
 		$icon.removeClass('redYellow')
 		$icon.removeClass('yellowGreen')
@@ -76,7 +80,6 @@ $('.btn-manager').click(function(){
 	$('.btn-needed-supply').show()
 	$('.btn-contributed-supply').hide()
 	$('.btn-supplyContributors').show()
-	console.log('r')
 });
 
 // CONTRIBUTION MODE BUTTON INTERACTION
@@ -143,49 +146,49 @@ $(document).on('click', '.form-submit', function(){
 	$('.supply-status').show()
 	var name = $('#supplyType').val()
 	console.log(name)
-	var qty = $('#inputQuantity').val()
-	$('#inputQuantity').val('')
-	console.log(qty)
-	var weight = $('#inputWeight').val()
-	$('#inputWeight').val('')
-	console.log(weight)
-	weightCounter += weight * qty;
+	weightCounter += $('#inputWeight').val() * $('#inputQuantity').val()
 	console.log(weightCounter)
 
 	// CREATES THE APPLICABLE SUPPLY ICON
 
 	if(name === 'Bottles of Water'){
-		waterNeeded = qty;
+		waterNeeded = $('#inputQuantity').val()
+		waterWeight = $('#inputWeight').val()
+		console.log(waterNeeded)
 	}
 	else if(name === 'Liters of Fuel'){
 
-			fuelNeeded = qty;
+			fuelNeeded = $('#inputQuantity').val()
+			fuelWeight = $('#inputWeight').val()
 	}
 	else if (name === 'Meals'){
-			mealsNeeded = qty;
+			mealsNeeded = $('#inputQuantity').val()
+			mealsWeight = $('#inputWeight').val()
 		}
 
+	$('#inputQuantity').val('')
+	$('#inputWeight').val('')
 	$('.suppliesRequested').empty();
 	$('.contContainer').empty();
 
 	if (fuelNeeded){
-		$('.suppliesRequested').append('<div class=" icons col-lg-3 text-center fuel" data-type="fuel" data-qty='+qty+' data-weight='+weight+'><p class="icon-text">' + qty+ '  Liters of Fuel</p><button type="button" class="btn btn-supplies-needed btn-fuel btn-default btn-lg"><span class="glyphicon glyphicon-tint liters"></span><p class="remove"> x </p></button><p class="contributionsText">'+fuelContributionCount+' Total Contributions</p></div>');
+		$('.suppliesRequested').append('<div class=" icons col-lg-3 text-center fuel" data-type="fuel" data-qty='+fuelNeeded+' data-weight='+fuelWeight+'><p class="icon-text">' + fuelNeeded+ '  Liters of Fuel</p><button type="button" class="btn btn-supplies-needed btn-fuel btn-default btn-lg"><span class="glyphicon glyphicon-tint liters"></span><p class="remove"> x </p></button><p class="contributionsText">'+fuelContributionCount+' Total Contributions</p></div>');
 
-		$('.contContainer').append('<div class=" icons col-lg-2 text-center fuel" data-type="fuel" data-qty='+qty+' data-weight='+weight+'><p class="icon-text">Liters of Fuel</p><button type="button" class="btn btn-supplies-needed btn-fuel btn-default btn-lg"><span class="glyphicon glyphicon-tint liters"></span></button></div>');
+		$('.contContainer').append('<div class=" icons col-lg-2 text-center fuel" data-type="fuel" data-qty='+fuelNeeded+' data-weight='+fuelWeight+'><p class="icon-text">Liters of Fuel</p><button type="button" class="btn btn-supplies-needed btn-fuel btn-default btn-lg"><span class="glyphicon glyphicon-tint liters"></span></button></div>');
 
 			$('.liters1').remove()
 	}
 	if (mealsNeeded){
-		$('.suppliesRequested').append('<div  class=" icons col-lg-3 text-center meals" data-type="meal" data-qty='+qty+' data-weight='+weight+'><p class="icon-text">' + qty + ' Meals</p><button type="button" class="btn btn-supplies-needed btn-meals btn-default btn-lg"><span class="glyphicon glyphicon-cutlery"></span><p class="remove"> x </p></button><p class="contributionsText">'+mealsContributionCount+' Total Contributions</p></div>');
+		$('.suppliesRequested').append('<div  class=" icons col-lg-3 text-center meals" data-type="meal" data-qty='+mealsNeeded+' data-weight='+mealsWeight+'><p class="icon-text">' + mealsNeeded + ' Meals</p><button type="button" class="btn btn-supplies-needed btn-meals btn-default btn-lg"><span class="glyphicon glyphicon-cutlery"></span><p class="remove"> x </p></button><p class="contributionsText">'+mealsContributionCount+' Total Contributions</p></div>');
 
-		$('.contContainer').append('<div  class=" icons col-lg-2 text-center meals" data-type="meal" data-qty='+qty+' data-weight='+weight+'><p class="icon-text">Meals</p><button type="button" class="btn btn-supplies-needed btn-meals btn-default btn-lg"><span class="glyphicon glyphicon-cutlery"></span></button></div>');
+		$('.contContainer').append('<div  class=" icons col-lg-2 text-center meals" data-type="meal" data-qty='+mealsNeeded+' data-weight='+mealsWeight+'><p class="icon-text">Meals</p><button type="button" class="btn btn-supplies-needed btn-meals btn-default btn-lg"><span class="glyphicon glyphicon-cutlery"></span></button></div>');
 
 			$('.meals1').remove()
 	}
 	if (waterNeeded){
-		$('.suppliesRequested').append('<div class=" icons col-lg-3 text-center water" data-type="water" data-qty='+qty+' data-weight='+weight+'><p class="icon-text">' +qty + ' Bottles of Water</p><button type="button" class="btn btn-supplies-needed btn-water btn-default btn-lg"><span class="glyphicon glyphicon-tint"></span><p class="remove"> x </p></button><p class="contributionsText">'+waterContributionCount+' Total Contributions</p> </div>');
+		$('.suppliesRequested').append('<div class=" icons col-lg-3 text-center water" data-type="water" data-qty='+waterNeeded+' data-weight='+waterWeight+'><p class="icon-text">' +waterNeeded + ' Bottles of Water</p><button type="button" class="btn btn-supplies-needed btn-water btn-default btn-lg"><span class="glyphicon glyphicon-tint"></span><p class="remove"> x </p></button><p class="contributionsText">'+waterContributionCount+' Total Contributions</p> </div>');
 
-		$('.contContainer').append('<div class=" icons col-lg-2 text-center water" data-type="water" data-qty='+qty+' data-weight='+weight+'><p class="icon-text"> Bottles of Water</p><button type="button" class="btn btn-supplies-needed btn-water btn-default btn-lg"><span class="glyphicon glyphicon-tint"></span></button> </div>');
+		$('.contContainer').append('<div class=" icons col-lg-2 text-center water" data-type="water" data-qty='+waterNeeded+' data-weight='+waterWeight+'><p class="icon-text"> Bottles of Water</p><button type="button" class="btn btn-supplies-needed btn-water btn-default btn-lg"><span class="glyphicon glyphicon-tint"></span></button> </div>');
 
 			// REMOVES THE VALUE FROM THE DROPDOWN
 			$('.bottles').remove()	
@@ -329,24 +332,20 @@ $(document).on('click', '.remove', function(){
 	var icon = $(this).closest(".icons").attr('data-type')
 	if(icon === 'water'){
 	$('#supplyType').append('<option class="bottles">Bottles of Water</option>')
-		
+	 waterNeeded = 0;	
 	}
 
 	else if (icon === 'meal'){
 		$('#supplyType').append('<option class="meals1">Meals</option>')
-		
+		mealsNeeded = 0;
 	}
 
 	else if (icon === 'fuel'){
 		$('#supplyType').append('<option class="liters1">Liters of Fuel</option>')
 		
+		fuelNeeded = 0;
 	}
 
-	if( $('.supply-status').children().length <=2){
-
-			$('.supply-status').hide()
-
-	}
 
 // REMOVES THE SUPPLY QUANTITY FROM THE GLOBAL QTY AND WEIGHT COUNTER & THE PLANE ICON IF APPLICABLE
 	var removeQuantity = $(this).closest('.icons').attr('data-qty')
@@ -363,6 +362,11 @@ $(document).on('click', '.remove', function(){
 
 	}	
 
+	if( $('.suppliesRequested').children().length <1){
+		console.log('r')
+			$('.supply-status').hide()
+
+	}
 
 	});
   
