@@ -11,16 +11,16 @@
 <div class="container">
 
 <!-- HEADER AREA -->
-  <div class="row">
+  <div class="row header">
     <div class=" col-md-12 col-xs-12">
       <div class="logo">
         <img src="Mother-Chaos-Logo.png">
         <h1>Stability Operations (StabOps) Inc.</h1>
       </div>
       <h4>Providing emergency assistance to those in need</h4>
-      <p>StabOps is collecting supplies to deliver to those effected by <b>Typhoon Raine</b>. Your contributions are desperatly needed and greatly apprceiated. 
+      <p>StabOps is collecting supplies to deliver to those effected by <b>Typhoon Raine</b>. Your contributions are desperately needed and greatly apprceiated. 
       <p id="thanks"><i>Thanks for your support</i></p>
-      </div>
+    
 
   </div>
 
@@ -34,12 +34,18 @@
 <div><button type="button" class="btn btn-supplyContributors btn-default">Supply Contributors</button>
 </div>
 
-<div>
+<div class="orgMetrics row">
   <div class="row contGrid">
+  <div class="supply-needed-area">
+              <h3 id="contributorsText">Contributors</h3>
+
+          </div>
     <div class="col-lg-2 contGridText">Organization</div>
     <div class="col-lg-2 contGridText">Total Contributions</div>
-
-    <!-- <div class="row"><div class="col-lg-2">'+org+'</div><div class="col-lg-2">Total #</div><div class="col-lg-2">'+qty1+'</div><div class="col-lg-2">'+qty1'</div><div class="col-lg-2">'+qty1'</div></div> -->
+    <div class='contContainer'>
+      
+    </div>
+   
   </div>
 
   <div class="orgContribution">
@@ -60,6 +66,11 @@
               <h3 id="supplies-needed">Supplies Needed Every 30 Days</h3>
 
           </div>
+          <div class="suppliesRequested">
+            
+
+          </div>
+
       </div>
     </div>
 
@@ -138,9 +149,9 @@
         <div class="controls col-xs-6">
           <select id="supplyType" name="supplyType" class="form-control">
             <option>Supply Type</option>
-            <option class="bottles">Bottles of Water</option>
-            <option class="liters1">Liters of Fuel</option>
-            <option class="meals1">Meals</option>
+            <option class="bottles" data-type="water">Bottles of Water</option>
+            <option class="liters1" data-type="fuel">Liters of Fuel</option>
+            <option class="meals1" data-type="meals">Meals</option>
           </select>
         </div>
      </div>       

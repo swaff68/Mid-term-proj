@@ -1,3 +1,5 @@
+
+
 img {
 	height: 60px;
 	width: 60px;
@@ -47,14 +49,38 @@ p {
 	margin-bottom: 30px;
 }
 
-
-.contGrid{
-	border: 1px solid lightgrey;
-
+.btn-supplyContributors{
+	display: none;
 }
+
+.orgMetrics{
+	border-radius: 12px;
+	box-shadow: 2px 3px grey;
+	border: 1px solid lightgrey;
+	display: none;
+	margin-top: 5px;
+}
+
+.contTotal{
+	margin-left: 40px;
+}
+
+
 .contGridText{
 	margin-top: 80px;
 	font-size: 18px;
+	margin-left: 10px;
+}
+
+.contStats{
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	margin: 0;
+}
+
+#contributorsText{
+margin-top: 10px;
+margin-left: 25px;
 }
 
 .supply-status{
@@ -63,7 +89,7 @@ height: 200px;
 border-radius: 12px;
 box-shadow: 2px 3px grey;
 display: none;
-margin-top: 20px;
+margin-top: 90px;
 }
 
 #supplies-needed{
@@ -81,7 +107,18 @@ margin-top: 20px;
 
 }
 
+.qtyText{
+margin-left: -40px; 
+	text-align: center;
+}
 
+.qtyMeals{
+	margin-left:-2px;
+}
+
+.qtyWater{
+	margin-left: -1px;
+}
 
 
 #water-needed{
@@ -250,7 +287,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 }
 
 .btn-supplyContributors{
-display: block;
+	margin-top: 15px;
 }
 
 
@@ -259,14 +296,3 @@ display: block;
 
 }
 
-.qtyWater{
-	margin-left: 45px;
-}
-
-.qtyFuel{
-	margin-left: 10px;
-}
-
-.qtyMeals{
-	margin-left: -10px;
-}
